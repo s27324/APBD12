@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Employee>
+
+<h1>List of employees</h1>
+
+<p>Number of employees: @Model.Count()</p>
+<table class="table">
+    <tr>
+        <th>IdEmployee</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Address</th>
+        <th>Email</th>
+    </tr>
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>@emp.IdEmp</td>
+            <td>@emp.FirstName</td>
+            <td>@emp.LastName</td>
+            <td>@emp.Address</td>
+            <td>@emp.Email</td>
+        </tr>
+    }
+</table>
